@@ -1,9 +1,10 @@
-#include "../src/UIMVP/UI.hpp"
+#include "../src/UI/UIMVP/UIMVP.hpp"
+#include "../src/UI/UInterface.hpp"
 #include <cassert>
 #include <sstream>
 
 void test_print() {
-    UI ui;
+    UIInterface ui = UIMVP();
     std::ostringstream oss;
     // Redirect std::cout to oss
     std::streambuf* old_cout = std::cout.rdbuf(oss.rdbuf());
@@ -20,7 +21,7 @@ void test_print() {
 }
 
 void test_getStringFromUser() {
-    UI ui;
+    UIInterface ui = UIMVP();
     std::istringstream iss("Test string\n");
     std::streambuf* old_cin = std::cin.rdbuf(iss.rdbuf());
 
@@ -32,7 +33,7 @@ void test_getStringFromUser() {
 }
 
 void test_getNumFromUser() {
-    UI ui;
+    UIInterface ui = UIMVP();
     std::istringstream iss("42\n");
     std::streambuf* old_cin = std::cin.rdbuf(iss.rdbuf());
 

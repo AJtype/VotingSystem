@@ -1,16 +1,16 @@
-#include "UI.hpp"
+#include "UIMVP.hpp"
 
-void UI::print(const std::string& sentence) {
+void UIMVP::print(const std::string& sentence) {
     std::cout << sentence << std::endl;
 }
 
-std::string UI::getStringFromUser() {
+std::string UIMVP::getStringFromUser() {
     std::string input;
     std::getline(std::cin, input);
     return input;
 }
 
-int UI::getNumFromUser() {
+int UIMVP::getNumFromUser() {
     int input;
     std::cin >> input;
     // To consume the trailing newline for future std::getline calls:
