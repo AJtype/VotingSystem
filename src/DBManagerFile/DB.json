@@ -1,0 +1,100 @@
+
+{
+  "users": [
+    {
+      "ID": 1,
+      "username": "alice",
+      "password": "alice_pass",
+      "permissions": 1,
+      "isActive": false,
+      "voteToOwnership": [
+        {"first": 0, "second": true},
+        {"first": 1, "second": false}
+      ]
+    },
+    {
+      "ID": 2,
+      "username": "bob",
+      "password": "bob_secret",
+      "permissions": 1,
+      "isActive": false,
+      "voteToOwnership": [
+        {"first": 0, "second": false},
+        {"first": 1, "second": true}
+      ]
+    },
+    {
+      "ID": 3,
+      "username": "carol",
+      "password": "carol123",
+      "permissions": 0,
+      "isActive": false,
+      "voteToOwnership": []
+    },
+    {
+      "ID": 4,
+      "username": "dave",
+      "password": "dave2023",
+      "permissions": 1,
+      "isActive": false,
+      "voteToOwnership": [
+        {"first": 2, "second": true}
+      ]
+    },
+    {
+      "ID": 5,
+      "username": "eve",
+      "password": "eve_pw",
+      "permissions": 1,
+      "isActive": false,
+      "voteToOwnership": [
+        {"first": 1, "second": false}
+      ]
+    }
+  ],
+  "votes": [
+    {
+      "voteID": 0,
+      "creatorID": 1,
+      "title": "Favorite Color",
+      "options": ["Red", "Blue", "Green", "Yellow"],
+      "endTime": "2024-07-01T12:00:00Z",
+      "votes": {
+        "2": 0,
+        "4": 1,
+        "5": 2
+      }
+    },
+    {
+      "voteID": 1,
+      "creatorID": 2,
+      "title": "Pizza Topping",
+      "options": ["Pepperoni", "Cheese", "Mushrooms"],
+      "endTime": "2024-07-10T18:00:00Z",
+      "votes": {
+        "1": 2,
+        "5": 1
+      }
+    },
+    {
+      "voteID": 2,
+      "creatorID": 4,
+      "title": "Best Programming Language",
+      "options": ["C++", "Python", "Rust"],
+      "endTime": "2024-07-30T20:00:00Z",
+      "votes": {
+        "1": 0,
+        "2": 2,
+        "3": 1
+      }
+    }
+  ],
+  "permission_reasons": [
+    {
+      "userID": 3,
+      "username": "carol",
+      "reason": "Would like to choose a vacation spot"
+    }
+  ]
+}
+
